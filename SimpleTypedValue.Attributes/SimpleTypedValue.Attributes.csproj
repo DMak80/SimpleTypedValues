@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AssemblyVersion>0.0.0.1</AssemblyVersion>
+        <IsPackable>true</IsPackable>
+        <Title>SimpleTypedValue Attributes</Title>
+        <Authors>Denis Makaev</Authors>
+        <Description>Use SourceGenerator attribute for SimpleTypedValue</Description>
+        <RootNamespace>SimpleTypedValue.Attributes</RootNamespace>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <LangVersion>10</LangVersion>
+        <TargetFrameworks>net6.0</TargetFrameworks>
+    </PropertyGroup>
+
+</Project>

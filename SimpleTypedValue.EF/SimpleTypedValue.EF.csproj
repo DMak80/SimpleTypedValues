@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AssemblyVersion>0.0.0.1</AssemblyVersion>
+        <IsPackable>true</IsPackable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>SimpleTypedValue EF</Title>
+        <Authors>Denis Makaev</Authors>
+        <Description>Use SimpleTypedValue with EntityFramework.Core</Description>
+        <LangVersion>10</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\SimpleTypedValue\SimpleTypedValue.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.2" />
+    </ItemGroup>
+
+</Project>

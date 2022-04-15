@@ -1,0 +1,33 @@
+image: mcr.microsoft.com/dotnet/sdk:6.0
+
+stages:
+    - build_test
+    - deploy
+
+variables:
+    Version: "0.1.$CI_PIPELINE_IID.0-alpha"
+    ConnectionString_Tests: "Server=192.168.0.1,11433;Initial Catalog=SimpleTypedValueDb;User Id=sa;Password=Str0ngPa__w0rd;TrustServerCertificate=true;"
+    NUGET_URL: $NUGET_URL
+    NUGET_KEY: $NUGET_KEY
+
+before_script:
+    - "dotnet restore"
+
+build:
+    stage: build_test
+    script:
+        - "dotnet test --no-restore"
+
+deploy:
+    stage: deploy
+    script:
+        - "dotnet build /p:Version=$Version -c Release --no-restore"
+        - "dotnet pack /p:Version=$Version -c Release --no-restore --no-build -o ./artifacts"
+#        - "dotnet nuget push ./artifacts/*.nupkg --skip-duplicate --source $NUGET_URL --api-key $NUGET_KEY"
+        - 'for i in ./artifacts/*.nupkg ; do dotnet nuget push "$i" --skip-duplicate --source $NUGET_URL --api-key $NUGET_KEY ; done'
+    rules:
+        - if: '$CI_COMMIT_REF_PROTECTED == "true"'
+          when: manual
+        - if: '$CI_COMMIT_REF_PROTECTED != "true"'
+          when: never
+          

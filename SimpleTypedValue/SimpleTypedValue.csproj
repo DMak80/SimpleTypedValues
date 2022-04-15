@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <Nullable>enable</Nullable>
+        <AssemblyVersion>0.0.0.1</AssemblyVersion>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>SimpleTypedValue</Title>
+        <Authors>Denis Makaev</Authors>
+        <LangVersion>10</LangVersion>
+        <TargetFrameworks>net6.0</TargetFrameworks>
+    </PropertyGroup>
+
+</Project>
