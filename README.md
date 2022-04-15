@@ -1,6 +1,8 @@
 # SimpleTypedValue
 
-The goal of the project is to simplify moving from code like this
+This is a value object library. 
+
+The main goal of the project is to use value objects as identifiers in entities, simplify moving from code like this
 
 ```csharp
     AnyFunc(long organizationId, long userId)
