@@ -9,7 +9,7 @@
         <Authors>Denis Makaev</Authors>
         <Description>Use SimpleTypedValue with Dapper</Description>
         <LangVersion>10</LangVersion>
-        <TargetFrameworks>net6.0</TargetFrameworks>
+        <TargetFramework>net6.0</TargetFramework>
     </PropertyGroup>
 
     <ItemGroup>

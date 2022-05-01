@@ -11,7 +11,7 @@
         <RootNamespace>SimpleTypedValue.Attributes</RootNamespace>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <LangVersion>10</LangVersion>
-        <TargetFrameworks>net6.0</TargetFrameworks>
+        <TargetFramework>net6.0</TargetFramework>
     </PropertyGroup>
 
 </Project>

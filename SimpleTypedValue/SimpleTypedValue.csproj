@@ -7,7 +7,7 @@
         <Title>SimpleTypedValue</Title>
         <Authors>Denis Makaev</Authors>
         <LangVersion>10</LangVersion>
-        <TargetFrameworks>net6.0</TargetFrameworks>
+        <TargetFramework>net6.0</TargetFramework>
     </PropertyGroup>
 
 </Project>

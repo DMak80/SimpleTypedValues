@@ -13,15 +13,9 @@ public class CreateBenchmarks
     }
 
     [Benchmark]
-    public object TestCreate_ObjectLong()
+    public TestId TestCreate_LongViaCreatorShort()
     {
-        return Info.Create((object)100L);
-    }
-
-    [Benchmark]
-    public object TestCreate_Long()
-    {
-        return Info.Create(100L);
+        return TypedValueCreator<TestId>.Create(100);
     }
 
     [Benchmark]
@@ -31,15 +25,9 @@ public class CreateBenchmarks
     }
 
     [Benchmark]
-    public object TestCreate_ObjectInt()
+    public TestId TestCreate_IntViaCreatorShort()
     {
-        return Info.Create((object)100);
-    }
-
-    [Benchmark]
-    public object TestCreate_Int()
-    {
-        return Info.Create(100);
+        return TypedValueCreator<TestId>.Create(100);
     }
 
     [Benchmark]

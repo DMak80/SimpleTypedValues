@@ -34,7 +34,8 @@ public class ConstructorsInfo
     {
         var result = ConstructorDefinedEnum.None;
         if (context.Type.Constructors.Any(x => !x.IsStatic
-                                               && x.Parameters.Length == 0))
+                                               && x.Parameters.Length == 0
+                                               && !x.IsImplicitlyDeclared))
             result |= ConstructorDefinedEnum.Default;
         if (context.Type.Constructors.Any(x => !x.IsStatic
                                                && x.Parameters.Length == 1

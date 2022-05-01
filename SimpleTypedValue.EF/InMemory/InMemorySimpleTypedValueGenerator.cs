@@ -32,6 +32,6 @@ public class InMemorySimpleTypedIntegerValueGenerator<T> : ValueGenerator<T>, IR
     {
         var newValue = Interlocked.Increment(ref _value);
         var data = Convert.ChangeType(newValue, Info.InterfaceArgument);
-        return (T)Info.Create(data);
+        return TypedValueCreator<T>.Create(data);
     }
 }

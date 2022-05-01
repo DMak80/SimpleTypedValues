@@ -48,14 +48,7 @@ public class FileGenerator
     public void Run()
     {
         var source = GetSource();
-
         _context.AddSource(_fileNameGenerator.FileName, source);
-
-        // var descriptor = new DiagnosticDescriptor("id", "SimpleTypeValueIncrementalGenerator",
-        //     $"Type: {typeName} valueType: {valueType}", "CA",
-        //     DiagnosticSeverity.Info, true);
-        // var diagnostic = Diagnostic.Create(descriptor, Location.None, DiagnosticSeverity.Info);
-        // _context.ReportDiagnostic(diagnostic);
     }
 
     public static INamedTypeSymbol? GetInterface(INamedTypeSymbol typeSymbol)

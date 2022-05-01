@@ -6,14 +6,14 @@ namespace SimpleTypedValue._Test;
 [TypedValue]
 public partial struct LongTypedValue : ITypedValue<long>
 {
-    public long Value { get; private init; }
+    public long Value { get; }
 }
 
 [TypedValue]
 public partial struct StringTypedValue : ITypedValue<string>
 {
     private static string Default = string.Empty;
-    public string Value { get; private init; }
+    public string Value { get; }
 }
 
 public class Tests
