@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+<!-- 
+* mdsrv.net
+Source = https://nuget.mdsrv.net/v3/index.json (ProtocolVersion = 2; IsHttp = True)
+    IsOfficial = False; IsMachineWide = False; IsLocal = False
+    IsEnabled = True; IsPersistable = True
+-->
+    <ItemGroup>
+        <PackageReference Include="SimpleTypedValue" Version="0.1.47-alpha" />
+        <PackageReference Include="SimpleTypedValue.Generator" Version="0.1.47-alpha" />
+    </ItemGroup>
+</Project>
